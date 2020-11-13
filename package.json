@@ -1,0 +1,31 @@
+{
+  "name": "testcafe-testing",
+  "version": "1.0.0",
+  "description": "Automated testing with Testcafe",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "testcafe chrome ./tests  -s takeOnFails=true",
+    "test:chrome:headless": "testcafe chrome:headless ./tests",
+    "test:chrome:mobile": "testcafe chrome:emulation:device=iphone x ./tests",
+    "test:safari": "testcafe safari ./tests",
+    "test:multiple": "testcafe firefox,chrome,safari ./tests",
+    "test:percy": "percy exec -- testcafe chrome ./tests",
+    "start-jenkin-server": "java -jar Jenkins.war -httpPort=8080 --enable-future-java"
+  },
+  "keywords": [
+    "TestCafe",
+    "Testing",
+    "Automation"
+  ],
+  "author": "Sanderson Kwabena Imbeah",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^1.9.2",
+    "wdio-docker-service": "^3.0.0",
+    "xpath-to-css": "^1.0.5"
+  },
+  "dependencies": {
+    "@percy/testcafe": "^0.2.0",
+    "prettier": "^2.1.2"
+  }
+}
